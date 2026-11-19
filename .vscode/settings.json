@@ -1,0 +1,13 @@
+{
+  "remote.autoForwardPorts": true,
+  "remote.portsAttributes": {
+    "5173": {
+      "label": "Invoice Intake UI",
+      "onAutoForward": "openBrowser"
+    },
+    "8000": {
+      "label": "Invoice Intake API",
+      "onAutoForward": "notify"
+    }
+  }
+}

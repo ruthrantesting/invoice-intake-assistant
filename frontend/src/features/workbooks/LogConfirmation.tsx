@@ -1,0 +1,5 @@
+type Props = { destination: string; row: Record<string, string | null>; flags: string[]; onConfirm: () => void };
+
+export function LogConfirmation({ destination, row, flags, onConfirm }: Props) {
+  return <section className="card confirmation-card"><div className="section-top"><div><h2>Review proposed log entry</h2><p>Nothing is written until you explicitly confirm.</p></div><span className="pill">Preview only</span></div><div className="confirmation-destination"><strong>Destination</strong><span>{destination}</span></div><dl className="proposed-row">{Object.entries(row).map(([key, value]) => <div key={key}><dt>{key.replaceAll("_", " ")}</dt><dd>{value ?? "—"}</dd></div>)}</dl><div className="flag-box"><strong>Checks and flags</strong>{flags.length ? <ul>{flags.map((flag, index) => <li key={`${index}-${flag}`}>{flag}</li>)}</ul> : <p>No flags recorded.</p>}</div><p className="authority-note">Confirming records reviewed invoice data only. It does not approve the invoice or authorize payment.</p><button className="primary-button" type="button" onClick={onConfirm}>Confirm logging for this invoice</button></section>;
+}

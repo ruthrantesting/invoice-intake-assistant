@@ -1,0 +1,46 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+dist/
+build/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+
+# Node / frontend
+node_modules/
+frontend/dist/
+coverage/
+playwright-report/
+test-results/
+frontend/package-lock.json
+
+# Secrets and local configuration
+.env
+.env.*
+!.env.example
+
+# Runtime data
+backend/var/
+backend/.prototype_data/
+backend/invoice-agent-prototype.db*
+*.sqlite3
+*.log
+
+# Editor / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+*.tmp
+*.swp
+
+backend/backend/var/
+
+/.agents/
+/.specify/
